@@ -22,7 +22,7 @@ start() ->
                                              {"/hello", ?MODULE, []},
                                              {'_', ?MODULE, []}
                                             ]}]),
-    {ok, _} = cowboy:start_http(echo_listener, 2, [
+    {ok, _} = cowboy:start_clear(echo_listener, 2, [
                                                    {port, 8080},
                                                    {max_connections, 100}
                                                   ],
